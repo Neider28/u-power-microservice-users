@@ -19,7 +19,7 @@ export class User {
   @Prop({ required: false, unique: false })
   name: string;
 
-  @Prop({ required: false, unique: false, default: '' })
+  @Prop({ required: false, default: '' })
   personalId: string;
 
   @Prop({
