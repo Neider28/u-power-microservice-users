@@ -29,7 +29,9 @@ export class AuthService {
     }
 
     const newUser = await this.usersService.create({
-      picture: payload.picture,
+      picture:
+        payload.picture ||
+        'https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg',
       name: payload.name,
       googleId: payload.sub,
       email: payload.email,
