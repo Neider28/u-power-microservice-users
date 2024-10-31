@@ -42,7 +42,7 @@ export class UsersService {
 
     const user = this.userModel.findOneAndUpdate(
       { googleId: id },
-      updateUserDto,
+      { personalId: updateUserDto.personalId },
       {
         new: true,
         returnDocument: 'after',
